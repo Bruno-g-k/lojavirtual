@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Log;
 
 class ProductsController extends Controller
 {
+    public function apiIndex(){
+        return response()->json(Product::all());
+    }
+
     public function reportPdf(Request $request)
     {
         $products = DB::table('products')

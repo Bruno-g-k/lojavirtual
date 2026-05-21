@@ -6,6 +6,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TypesController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/api/products', [ProductsController::class, 'apiIndex']) ->name('products.api.index');
+
 Route::get('/', [HomeController::class, 'index']);
 
 
