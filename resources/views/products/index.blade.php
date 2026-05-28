@@ -61,5 +61,8 @@ produto" class="w-20 h-20 object-cover rounded">
                 @endforeach
             </tbody>
         </table>
+        <div class="mt-6">
+            {{ $products->links() }}
+        </div>
     </div>
 </x-app-layout>

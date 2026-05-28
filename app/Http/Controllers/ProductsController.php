@@ -98,8 +98,9 @@ class ProductsController extends Controller
     //passando como parâmetro a consulta no banco com ::all()
     public function index()
     {
+        $products = Product::with('type')->paginate(10);
         return view('products.index', [
-            'products' => Product::all()
+            'products' => $products
         ]);
     }
 
